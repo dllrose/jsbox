@@ -1,6 +1,6 @@
 /*
 
-dllrose×¨ÓÃ
+dllroseä¸“ç”¨
 
 */
 
@@ -19,7 +19,7 @@ const searchView = {
     type: "text",
     props: {
       id: "bgInfo",
-      text: "½Å±¾ËùÓĞÄÚÈİÀ´×Ô\n\n×Ô¶¨Òå±³¾°ÄÚÈİ",
+      text: "è„šæœ¬æ‰€æœ‰å†…å®¹æ¥è‡ª\n\nè‡ªå®šä¹‰èƒŒæ™¯å†…å®¹",
       editable: false,
       textColor: $color("#CCCCCC"),
       font: $font(12),
@@ -52,7 +52,7 @@ const searchView = {
     type: "input",
     props: {
       id: "input",
-      placeholder: "ÔØÈëÖĞ, ÇëÉÔºò...",
+      placeholder: "è½½å…¥ä¸­, è¯·ç¨å€™...",
       id: "input",
       font: $font(13),
       clearsOnBeginEditing: false,
@@ -88,9 +88,9 @@ const searchView = {
     type: "matrix",
     props: {
       id: "initialView",
-      itemHeight: ×Ô¶¨ÒåÍ¼Æ¬¸ß¶È,
-      columns: ×Ô¶¨ÒåÍ¼Æ¬ÁĞÊı,
-      spacing: ×Ô¶¨ÒåÍ¼Æ¬¼ä¾à,
+      itemHeight: è‡ªå®šä¹‰å›¾ç‰‡é«˜åº¦,
+      columns: è‡ªå®šä¹‰å›¾ç‰‡åˆ—æ•°,
+      spacing: è‡ªå®šä¹‰å›¾ç‰‡é—´è·,
       square: false,
       bgcolor: $color("clear"),
       template: [{
@@ -151,7 +151,7 @@ const searchView = {
           actressPage = 0
           getActress(favLink)
           if (LocalActressList.indexOf(shortCode) > -1) {
-            $("favActress").title = "È¡ÏûÊÕ²Ø";
+            $("favActress").title = "å–æ¶ˆæ”¶è—";
             $("favActress").bgcolor = $color("#f25959");
             $("favActress").titleColor = $color("white");
             $("favActress").borderColor = $color("#f25959");
@@ -161,22 +161,22 @@ const searchView = {
         // $ui.push(detailView)
           if ($("menu").index == 0 || $("menu").index == 1) {
             if (LocalFavList.indexOf(shortCode) > -1) {
-              $("favorite").title = "È¡ÏûÊÕ²Ø"
+              $("favorite").title = "å–æ¶ˆæ”¶è—"
               $("favorite").bgcolor = $color("#f25959")
             } else if (LocalArcList.indexOf(shortCode) > -1) {
-              $("favorite").title = "ÒÑ¹éµµ"
+              $("favorite").title = "å·²å½’æ¡£"
               $("favorite").bgcolor = $color("#aaaaaa")
             }
           } else if ($("menu").index == 2) {
             if (LocalFavList.indexOf(shortCode) > -1) {
-              $("favorite").title = "¹éµµ"
+              $("favorite").title = "å½’æ¡£"
 
             } else {
-              $("favorite").title = "ÊÕ²Ø"
+              $("favorite").title = "æ”¶è—"
             }
 
           } else {
-            $("favorite").title = "É¾³ı"
+            $("favorite").title = "åˆ é™¤"
             $("favorite").bgcolor = $color("#f25959")
           }
         }
@@ -189,7 +189,7 @@ const searchView = {
     props: {
       id: "tab",
       hidden: false,
-      items: ["Ó°Æ¬", "ÑİÔ±"],
+      items: ["å½±ç‰‡", "æ¼”å‘˜"],
       tintColor: $color("black"),
       radius: 5,
       bgcolor: $color("white"),
@@ -208,7 +208,7 @@ const searchView = {
           //$("initialView").contentOffset = $point(0, 0);
           var length = LocalFavList.length;
           $("input").text = ("")
-          $("input").placeholder = "ÒÑÊÕ²Ø " + length + " ²¿Ó°Æ¬"
+          $("input").placeholder = "å·²æ”¶è— " + length + " éƒ¨å½±ç‰‡"
           if (length == 0) {
             $("initialView").hidden = true
           } else {
@@ -232,7 +232,7 @@ const searchView = {
           $("initialView").contentOffset = $point(0, 0);
           var length = LocalActressList.length;
           $("input").text = ("")
-          $("input").placeholder = "ÒÑÊÕ²Ø " + length + " Î»ÑİÔ±"
+          $("input").placeholder = "å·²æ”¶è— " + length + " ä½æ¼”å‘˜"
           if (length == 0) {
             $("initialView").hidden = true
           } else {
@@ -267,7 +267,7 @@ const screenshotView = {
 
   type: "view",
   props: {
-    title: "Ó°Æ¬½ØÆÁ"
+    title: "å½±ç‰‡æˆªå±"
   },
   views: [{
     type: "matrix",
@@ -325,7 +325,7 @@ function actressView(actress, cover) {
       type: "text",
       props: {
         id: "actressInfo",
-        text: "ÉúÈÕ: ????-??-??\n\nÄêÁä: ??Ëê\n\nÉí¸ß: ???cm\n\nÕÖ±­: ?",
+        text: "ç”Ÿæ—¥: ????-??-??\n\nå¹´é¾„: ??å²\n\nèº«é«˜: ???cm\n\nç½©æ¯: ?",
         editable: false,
         textColor: $color("black"),
         font: $font("bold", 15),
@@ -344,7 +344,7 @@ function actressView(actress, cover) {
       type: "text",
       props: {
         id: "actressInfo2",
-        text: "ĞØÎ§: ??cm\n\nÑüÎ§: ??cm\n\nÍÎÎ§: ??cm",
+        text: "èƒ¸å›´: ??cm\n\nè…°å›´: ??cm\n\nè‡€å›´: ??cm",
         editable: false,
         textColor: $color("black"),
         font: $font("bold", 15),
@@ -363,7 +363,7 @@ function actressView(actress, cover) {
       type: "button",
       props: {
         id: "favActress",
-        title: "ÊÕ²ØÑİÔ±",
+        title: "æ”¶è—æ¼”å‘˜",
         font: $font("bold", 15),
         bgcolor: $color("white"),
         titleColor: $color("black"),
@@ -388,16 +388,16 @@ function actressView(actress, cover) {
           }
 
           //$ui.action(data)
-          if ($("favActress").title == "ÊÕ²ØÑİÔ±") {
+          if ($("favActress").title == "æ”¶è—æ¼”å‘˜") {
 
-            $("favActress").title = "È¡ÏûÊÕ²Ø";
+            $("favActress").title = "å–æ¶ˆæ”¶è—";
             $("favActress").bgcolor = $color("#f25959");
             $("favActress").titleColor = $color("white");
             $("favActress").borderColor = $color("#f25959");
             favActressButtonTapped("add", data);
             //$ui.action(data)
-          } else if ($("favActress").title == "È¡ÏûÊÕ²Ø") {
-            $("favActress").title = "ÊÕ²ØÑİÔ±";
+          } else if ($("favActress").title == "å–æ¶ˆæ”¶è—") {
+            $("favActress").title = "æ”¶è—æ¼”å‘˜";
             $("favActress").bgcolor = $color("white");
             $("favActress").titleColor = $color("black");
             $("favActress").borderColor = $color("black");
@@ -465,49 +465,49 @@ function actressView(actress, cover) {
 
           /*if (LocalFavList.indexOf(favLink) > -1) {
             if ($("menu").index == 0) {
-              $("favorite").title = "È¡ÏûÊÕ²Ø";
+              $("favorite").title = "å–æ¶ˆæ”¶è—";
               $("favorite").bgcolor = $color("#f25959")
             } else if ($("menu").index == 1) {
-              $("favorite").title = "¹éµµ"
+              $("favorite").title = "å½’æ¡£"
             } else if ($("menu").index == 2){
               if (LocalArcList.indexOf(favLink) < 0){
-                 $("favorite").title = "¹éµµ"
+                 $("favorite").title = "å½’æ¡£"
               }
 
             }
           } else {
             if(LocalArcList.indexOf(favLink) > -1){
-              $("favorite").title = "ÒÑ¹éµµ"
+              $("favorite").title = "å·²å½’æ¡£"
             }
-            $("favorite").title = "ÊÕ²Ø"
+            $("favorite").title = "æ”¶è—"
           }*/
 
           if ($("menu").index == 0 || $("menu").index == 1) {
             if (LocalFavList.indexOf(shortCode) > -1) {
-              $("favorite").title = "È¡ÏûÊÕ²Ø"
+              $("favorite").title = "å–æ¶ˆæ”¶è—"
             } else if (LocalArcList.indexOf(shortCode) > -1) {
-              $("favorite").title = "ÒÑ¹éµµ"
+              $("favorite").title = "å·²å½’æ¡£"
               $("favorite").bgcolor = $color("#aaaaaa")
             }
           } else if ($("menu").index == 2) {
             if (LocalFavList.indexOf(shortCode) > -1) {
-              $("favorite").title = "¹éµµ"
+              $("favorite").title = "å½’æ¡£"
             } else if ((LocalArcList.indexOf(shortCode) > -1)) {
 
-              $("favorite").title = "ÒÑ¹éµµ"
+              $("favorite").title = "å·²å½’æ¡£"
               $("favorite").bgcolor = $color("#aaaaaa")
             } else {
-              $("favorite").title = "ÊÕ²Ø"
+              $("favorite").title = "æ”¶è—"
             }
           } else if ($("menu").index == 3) {
             if (LocalArcList.indexOf(shortCode) > -1) {
-              $("favorite").title = "É¾³ı"
+              $("favorite").title = "åˆ é™¤"
               $("favorite").bgcolor = $color("#f25959");
             } else {
               if (LocalFavList.indexOf(shortCode) > -1) {
-                $("favorite").title = "¹éµµ"
+                $("favorite").title = "å½’æ¡£"
               } else {
-                $("favorite").title = "ÊÕ²Ø"
+                $("favorite").title = "æ”¶è—"
               }
             }
           }
@@ -527,7 +527,7 @@ $ui.render({
       type: "menu",
       props: {
         id: "menu",
-        items: [×Ô¶¨ÒåÀ¸Ä¿]
+        items: [è‡ªå®šä¹‰æ ç›®]
       },
       layout: function(make) {
         make.top.left.right.inset(0)
@@ -540,7 +540,7 @@ $ui.render({
               $("bgInfo").hidden = false;
               
               $("tab").hidden = true;
-              $("input").placeholder = "×Ô¶¨ÒåËÑË÷À¸ÌáÊ¾"
+              $("input").placeholder = "è‡ªå®šä¹‰æœç´¢æ æç¤º"
               $("initialView").hidden = false
 
               $("initialView").data = []
@@ -556,7 +556,7 @@ $ui.render({
               
               $("tab").hidden = true;
               $("input").text = ""
-              $("input").placeholder = "×Ô¶¨ÒåËÑË÷À¸ÌáÊ¾";
+              $("input").placeholder = "è‡ªå®šä¹‰æœç´¢æ æç¤º";
               $("initialView").hidden = false;
 
               $("initialView").data = [];
@@ -581,7 +581,7 @@ $ui.render({
               }
               if ($("tab").index == 0) {
 
-                $("input").placeholder = "ÒÑÊÕ²Ø " + length + " ²¿Ó°Æ¬";
+                $("input").placeholder = "å·²æ”¶è— " + length + " éƒ¨å½±ç‰‡";
                 LocalData.favorite.map(function(i) {
                   $("initialView").data = $("initialView").data.concat({
                     code: i.code,
@@ -597,7 +597,7 @@ $ui.render({
 
               } else if ($("tab").index == 1) {
                 var length = LocalActressList.length;
-                $("input").placeholder = "ÒÑÊÕ²Ø " + length + " Î»ÑİÔ±";
+                $("input").placeholder = "å·²æ”¶è— " + length + " ä½æ¼”å‘˜";
                 LocalData.actress.map(function(i) {
                   $("initialView").data = $("initialView").data.concat({
                     link: homeStarPage + i.shortCode,
@@ -618,7 +618,7 @@ $ui.render({
               $("tab").hidden = true;
               var length = LocalArcList.length;
               $("input").text = ("")
-              $("input").placeholder = "ÒÑ¹éµµ " + length + " ²¿Ó°Æ¬"
+              $("input").placeholder = "å·²å½’æ¡£ " + length + " éƒ¨å½±ç‰‡"
               if (length == 0) {
                 $("initialView").hidden = true
               } else {
@@ -650,11 +650,11 @@ $ui.render({
 
 function getInitial(mode, keyword) {
   page++;
-  //$ui.toast("? ËÑË÷ÖĞ", 100)
+  //$ui.toast("? æœç´¢ä¸­", 100)
   if (mode == "home") {
-    url = ×Ô¶¨Òå_Ê×Ò³_¼ÓÔØÁ´½Ó
+    url = è‡ªå®šä¹‰_é¦–é¡µ_åŠ è½½é“¾æ¥
   } else if (mode == "search") {
-    url = encodeURI(×Ô¶¨Òå_Ê×Ò³_ËÑË÷Á´½Ó)
+    url = encodeURI(è‡ªå®šä¹‰_é¦–é¡µ_æœç´¢é“¾æ¥)
   }
   $http.request({
     url: url,
@@ -662,30 +662,30 @@ function getInitial(mode, keyword) {
     handler: function(resp) {
       $ui.loading(false);
       if (!resp.response) {
-        $ui.toast("? ÍøÂçÁ¬½Ó´íÎó")
+        $ui.toast("? ç½‘ç»œè¿æ¥é”™è¯¯")
         return
       }
       if (resp.data.indexOf("404 Not Found") > -1) {
-        $ui.toast("?? µ½µ×ÁË")
+        $ui.toast("?? åˆ°åº•äº†")
         return
-      } else if (resp.data.indexOf("Ã»ÓĞ½á¹û") > -1) {
+      } else if (resp.data.indexOf("æ²¡æœ‰ç»“æœ") > -1) {
         if (mode == "search" && $("initialView").data.length > 0) {
-          $ui.toast("?? µ½µ×ÁË")
+          $ui.toast("?? åˆ°åº•äº†")
           return
         } else {
-          $ui.toast("?? ËÑË÷ÎŞ¹û,³µÅÆÎŞĞ§")
+          $ui.toast("?? æœç´¢æ— æœ,è½¦ç‰Œæ— æ•ˆ")
           return
         }
 
       }
-      var reg = /×Ô¶¨Òå_ÕıÔò_°üº¬/g;
+      var reg = /è‡ªå®šä¹‰_æ­£åˆ™_åŒ…å«/g;
       var match = resp.data.match(reg)
       //$ui.action(match)
       var data = []
       match.map(function(i) {
-        var link = /×Ô¶¨Òå_Á¬½Ó_ÕıÔò/.exec(i)[1];
-        var image = /×Ô¶¨Òå_Í¼Æ¬_ÕıÔò/.exec(i)[1];
-        var title = /×Ô¶¨Òå_±êÌâ_ÕıÔò/.exec(i)[1];
+        var link = /è‡ªå®šä¹‰_è¿æ¥_æ­£åˆ™/.exec(i)[1];
+        var image = /è‡ªå®šä¹‰_å›¾ç‰‡_æ­£åˆ™/.exec(i)[1];
+        var title = /è‡ªå®šä¹‰_æ ‡é¢˜_æ­£åˆ™/.exec(i)[1];
        // var code = /<br><date>(.*?)<\/date>/.exec(i)[1];
        // var date = /\/\s<date>(.*?)<\/date><\/span>/.exec(i)[1];
         $("initialView").data = $("initialView").data.concat({
@@ -708,7 +708,7 @@ function getInitial(mode, keyword) {
         $("bgInfo").hidden = false;
     
       }
-      $("input").placeholder = "×Ô¶¨ÒåËÑË÷À¸ÌáÊ¾"
+      $("input").placeholder = "è‡ªå®šä¹‰æœç´¢æ æç¤º"
       //$ui.toast("", 0.1)
 
     }
@@ -747,9 +747,9 @@ function getInitialActress(){
   })
 }
 
-function getDetail(url) {      //µ¯³öÏêÇé ÕâÀïµ÷ÕûÁ¬½Ó
+function getDetail(url) {      //å¼¹å‡ºè¯¦æƒ… è¿™é‡Œè°ƒæ•´è¿æ¥
   
-  ×îÖÕ½á¹û
+  æœ€ç»ˆç»“æœ
 }
 
 function getActress(url) {
@@ -759,59 +759,59 @@ function getActress(url) {
     timeout: timeout,
     handler: function(resp) {
       if (!resp.response) {
-        $ui.toast("? ÍøÂçÁ¬½Ó´íÎó")
+        $ui.toast("? ç½‘ç»œè¿æ¥é”™è¯¯")
         return
       }
       if (resp.data.indexOf("404 Not Found") > -1) {
-        $ui.toast("?? µ½µ×ÁË")
+        $ui.toast("?? åˆ°åº•äº†")
         return
       }
-      //$ui.toast("ËÑË÷ÖĞ")
+      //$ui.toast("æœç´¢ä¸­")
       if (actressPage == 1) {
-        var temp = /<div class="photo-info">[\s\S]*?ÉúÈÕ:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?ç”Ÿæ—¥:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var birth = temp[1];
         } else {
           var birth = "????-??-??"
         }
-        var temp = /<div class="photo-info">[\s\S]*?ÄêÁä:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?å¹´é¾„:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
-          var age = temp[1]+"Ëê"
+          var age = temp[1]+"å²"
         } else {
-          var age = "??Ëê"
+          var age = "??å²"
         }
-        var temp = /<div class="photo-info">[\s\S]*?Éí¸ß:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?èº«é«˜:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var height = temp[1]
         } else {
           var height = "???cm"
         }
-        var temp = /<div class="photo-info">[\s\S]*?ÕÖ±­:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?ç½©æ¯:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var breast = temp[1]
         } else {
           var breast = "?"
         }
-        var temp = /<div class="photo-info">[\s\S]*?ĞØÎ§:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?èƒ¸å›´:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var xiong = temp[1]
         } else {
           var xiong = "??cm"
         }
-        var temp = /<div class="photo-info">[\s\S]*?ÑüÎ§:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?è…°å›´:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var yao = temp[1]
         } else {
           var yao = "??cm"
         }
-        var temp = /<div class="photo-info">[\s\S]*?ÍÎÎ§:\s(.*?)<\/p>/.exec(resp.data)
+        var temp = /<div class="photo-info">[\s\S]*?è‡€å›´:\s(.*?)<\/p>/.exec(resp.data)
         if (temp) {
           var tun = temp[1]
         } else {
           var tun = "??cm"
         }
-        $("actressInfo").text = "ÉúÈÕ: " + birth + "\n\nÄêÁä: " + age + "\n\nÉí¸ß: " + height + "\n\nÕÖ±­: " + breast;
-        $("actressInfo2").text = "ĞØÎ§: " + xiong + "\n\nÑüÎ§: " + yao + "\n\nÍÎÎ§: " + tun;
+        $("actressInfo").text = "ç”Ÿæ—¥: " + birth + "\n\nå¹´é¾„: " + age + "\n\nèº«é«˜: " + height + "\n\nç½©æ¯: " + breast;
+        $("actressInfo2").text = "èƒ¸å›´: " + xiong + "\n\nè…°å›´: " + yao + "\n\nè‡€å›´: " + tun;
 
       }
 
@@ -873,7 +873,7 @@ function favActressButtonTapped(mode, data) {
   }
 
   var length = LocalActressList.length;
-  $("input").placeholder = "ÒÑÊÕ²Ø " + length + " Î»ÑİÔ±";
+  $("input").placeholder = "å·²æ”¶è— " + length + " ä½æ¼”å‘˜";
   writeCache()
 }
 
@@ -894,7 +894,7 @@ function favoriteButtonTapped(mode, data) {
         }
       })
       var length = LocalFavList.length;
-      $("input").placeholder = "ÒÑÊÕ²Ø " + length + " ²¿Ó°Æ¬";
+      $("input").placeholder = "å·²æ”¶è— " + length + " éƒ¨å½±ç‰‡";
     }
 
   } else if (mode == "cancel") {
@@ -912,7 +912,7 @@ function favoriteButtonTapped(mode, data) {
       //$ui.action($("initialView").data)
       $("initialView").delete(idx)
       var length = LocalFavList.length;
-      $("input").placeholder = "ÒÑÊÕ²Ø " + length + " ²¿Ó°Æ¬"
+      $("input").placeholder = "å·²æ”¶è— " + length + " éƒ¨å½±ç‰‡"
     } else if ($("menu").index == 3) {
       $("initialView").data = [{
         link: homeMoviePage + shortCode,
@@ -925,7 +925,7 @@ function favoriteButtonTapped(mode, data) {
         }
       }].concat($("initialView").data)
       var length = LocalArcList.length;
-      $("input").placeholder = "ÒÑ¹éµµ " + length + " ²¿Ó°Æ¬"
+      $("input").placeholder = "å·²å½’æ¡£ " + length + " éƒ¨å½±ç‰‡"
     }
     LocalData.archive.unshift(data)
     LocalArcList.unshift(data.shortCode)
@@ -938,7 +938,7 @@ function favoriteButtonTapped(mode, data) {
     if ($("menu").index == 3) {
       $("initialView").delete(idx)
       var length = LocalArcList.length;
-      $("input").placeholder = "ÒÑ¹éµµ " + length + " ²¿Ó°Æ¬"
+      $("input").placeholder = "å·²å½’æ¡£ " + length + " éƒ¨å½±ç‰‡"
     }
   }
   writeCache()
@@ -993,7 +993,7 @@ function checkAdult() {
     }, {
       type: "text",
       props: {
-        text: "¾¯¸æ ??",
+        text: "è­¦å‘Š ??",
         textColor: $color("white"),
         font: $font("Helvetica-Bold", 25),
         bgcolor: $color("red"),
@@ -1009,7 +1009,7 @@ function checkAdult() {
     }, {
       type: "text",
       props: {
-        text: "±¾½Å±¾ÔËĞĞÄÚÈİ°üº¬³ÉÈËÊÓÆµ¡¢Í¼Æ¬£¬¿ÉÄÜ»áÒıÆğÄãµÄ²»ÊÊ£¬Çë½÷É÷ÔËĞĞ¡£\nÎ´ÂúÊ®°ËËê£¬½ûÖ¹ÔËĞĞ¡£\n\n½Å±¾ÔËĞĞĞè´úÀí£¬Çë½« Https://tellme.pw ¼ÓÈë´úÀí¡£",
+        text: "æœ¬è„šæœ¬è¿è¡Œå†…å®¹åŒ…å«æˆäººè§†é¢‘ã€å›¾ç‰‡ï¼Œå¯èƒ½ä¼šå¼•èµ·ä½ çš„ä¸é€‚ï¼Œè¯·è°¨æ…è¿è¡Œã€‚\næœªæ»¡åå…«å²ï¼Œç¦æ­¢è¿è¡Œã€‚\n\nè„šæœ¬è¿è¡Œéœ€ä»£ç†ï¼Œè¯·å°† Https://tellme.pw åŠ å…¥ä»£ç†ã€‚",
         textColor: $color("white"),
         font: $font("bold", 14),
         bgcolor: $color("clear"),
@@ -1025,7 +1025,7 @@ function checkAdult() {
     },{
       type: "button",
       props: {
-        title: "ÒÑÂúÊ®°ËËê",
+        title: "å·²æ»¡åå…«å²",
         titleColor: $color("black"),
         bgcolor: $color("white")
       },
@@ -1047,7 +1047,7 @@ function checkAdult() {
     }, {
       type: "button",
       props: {
-        title: "Î´ÂúÊ®°ËËê",
+        title: "æœªæ»¡åå…«å²",
         titleColor: $color("white"),
         bgcolor: $color("red")
       },
@@ -1066,7 +1066,7 @@ function checkAdult() {
   })
 }
 
-//¼ì²âÀ©Õ¹¸üĞÂ
+//æ£€æµ‹æ‰©å±•æ›´æ–°
 function scriptVersionUpdate() {
   $http.get({
     url: "https://raw.githubusercontent.com/nicktimebreak/xteko/master/HList/updateInfo",
@@ -1075,17 +1075,17 @@ function scriptVersionUpdate() {
       var msg = resp.data.msg;
       if (afterVersion > version) {
         $ui.alert({
-          title: "¼ì²âµ½ĞÂµÄ°æ±¾£¡V" + afterVersion,
-          message: "ÊÇ·ñ¸üĞÂ?\n¸üĞÂÍê³ÉºóÇëÍË³öÖÁÀ©Õ¹ÁĞ±íÖØĞÂÆô¶¯ĞÂ°æ±¾¡£\n" + msg,
+          title: "æ£€æµ‹åˆ°æ–°çš„ç‰ˆæœ¬ï¼V" + afterVersion,
+          message: "æ˜¯å¦æ›´æ–°?\næ›´æ–°å®Œæˆåè¯·é€€å‡ºè‡³æ‰©å±•åˆ—è¡¨é‡æ–°å¯åŠ¨æ–°ç‰ˆæœ¬ã€‚\n" + msg,
           actions: [{
-            title: "¸üĞÂ",
+            title: "æ›´æ–°",
             handler: function() {
               var url = "jsbox://install?url=https://raw.githubusercontent.com/nicktimebreak/xteko/master/HList/HList.js&name=HList" + afterVersion + "&icon=icon_135.png";
               $app.openURL(encodeURI(url));
               $app.close()
             }
           }, {
-            title: "È¡Ïû"
+            title: "å–æ¶ˆ"
           }]
         })
       }
@@ -1093,7 +1093,7 @@ function scriptVersionUpdate() {
   })
 }
 
-//³õÊ¼»¯Éè¶¨
+//åˆå§‹åŒ–è®¾å®š
 function initial() {
   var current = $addin.current;
   current.author = "Nicked";
@@ -1117,7 +1117,7 @@ function initial() {
 
 }
 
-//¼ôÌù°å¼ì²â
+//å‰ªè´´æ¿æ£€æµ‹
 function clipboardDetect() {
   var str = $clipboard.text
   var reg1 = /[sS][nN][iI][sS][\s\-]?\d{3}|[aA][bB][pP][\s\-]?\d{3}|[iI][pP][zZ][\s\-]?\d{3}|[sS][wW][\s\-]?\d{3}|[jJ][uU][xX][\s\-]?\d{3}|[mM][iI][aA][dD][\s\-]?\d{3}|[mM][iI][dD][eE][\s\-]?\d{3}|[mM][iI][dD][dD][\s\-]?\d{3}|[pP][gG][dD][\s\-]?\d{3}|[sS][tT][aA][rR][\s\-]?\d{3}|[eE][bB][oO][dD][\s\-]?\d{3}|[iI][pP][tT][dD][\s\-]?\d{3}/g;
@@ -1163,17 +1163,17 @@ function main() {
   initial()
   scriptVersionUpdate()
   timeout = 5
-  var url = ×Ô¶¨ÒåÊ×Ò³;
+  var url = è‡ªå®šä¹‰é¦–é¡µ;
   $http.request({
     timeout: timeout,
     url: url,
     handler: function(resp) {
-      var match = /×Ô¶¨Òå_Ê×Ò³ÕıÔò/g.exec(resp.data)
+      var match = /è‡ªå®šä¹‰_é¦–é¡µæ­£åˆ™/g.exec(resp.data)
       if (match) {
-        //$ui.toast("ÔØÈë³É¹¦", 1)
+        //$ui.toast("è½½å…¥æˆåŠŸ", 1)
         page = 0
         //$ui.action(match)
-        homepage = ´Î×Ô¶¨Òå_Ê×Ò³;
+        homepage = æ¬¡è‡ªå®šä¹‰_é¦–é¡µ;
         $console.log(homepage)
         homeMoviePage = homepage + "movie/";
         homeSearchPage = homepage + "search/"
@@ -1189,21 +1189,21 @@ function main() {
 
         getInitial(detect.mode, detect.keyword)
 
-        $ui.toast("ÔØÈë³É¹¦", 1)
+        $ui.toast("è½½å…¥æˆåŠŸ", 1)
         $("loading").text=""
-        // $("input").placeholder = "×Ô¶¨ÒåËÑË÷À¸ÌáÊ¾"
+        // $("input").placeholder = "è‡ªå®šä¹‰æœç´¢æ æç¤º"
       } else {
         $ui.action({
-          title: "ÎŞ·¨ÕÒµ½Ö÷Ò³",
-          message: "ÇëÁªÏµ½Å±¾×÷Õß»òÉÔºóÔÙÊÔ",
+          title: "æ— æ³•æ‰¾åˆ°ä¸»é¡µ",
+          message: "è¯·è”ç³»è„šæœ¬ä½œè€…æˆ–ç¨åå†è¯•",
           action: [{
-            title: "È·ÈÏ",
+            title: "ç¡®è®¤",
             handler: function() {
               $safari.open("https://t.me/nicked")
               $app.close()
             }
           }, {
-            title: "È¡Ïû",
+            title: "å–æ¶ˆ",
             handler: function() {
               $app.close()
             }
@@ -1219,7 +1219,7 @@ function main() {
 LocalDataPath = "drive://HList.json";
 var check = $cache.get("adultCheck")
 if (!check) {
-  //checkAdult() È¡ÏûµÚÒ»´ÎÌáÊ¾
+  //checkAdult() å–æ¶ˆç¬¬ä¸€æ¬¡æç¤º
 } else {
   main()
 }
